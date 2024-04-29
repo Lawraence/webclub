@@ -1,0 +1,475 @@
+/*web base - no touch*/
+html{
+	overflow-y: scroll;
+}
+body{
+	margin: 0px;
+}
+body *{
+	box-sizing: border-box;
+	font-family: arial;
+}
+#c{
+	border: 4px solid #EAEAEA;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.clearfix {
+   overflow: auto;
+}
+.clearfix::after{
+  content: "";
+  clear: both;
+  display: table;
+}
+#arrow{
+	position: absolute;
+	bottom: 0;
+	margin: auto;
+	height: 50px;
+	width: 100%;
+	text-align: center;
+	fill: #303030;
+	transition: 0.2s ease;
+}
+#arrow:hover{
+	padding-bottom: 5px;
+	fill: #EAEAEA;
+	transition: 0.5s ease;
+}
+#lang{
+	position: absolute;
+	top: 0;
+	right: 10%;
+}
+#lang *{
+	font-size: 16px;
+	color: #000;
+	text-decoration: none;
+}
+/*conditional formatting*/
+.al{ background: #B3C639}
+.ga{ background: #39C693}
+.ni{ background: #c64c39}
+.in{ background: #4C39C6}
+.rb{ background: #C6396C}
+#navbar ul a.al{border-top: 4px solid #B3C639}
+#navbar ul a.ga{border-top: 4px solid #39C693}
+#navbar ul a.ni{border-top: 4px solid #c64e39}
+#navbar ul a.in{border-top: 4px solid #4C39C6}
+#navbar ul a.rb{border-top: 4px solid #C6396C}
+#txtcontent.al{ background: linear-gradient(135deg, #F3FF99 5%, #E3F679, #C3D649)}
+#txtcontent.ga{ background: linear-gradient(135deg, #C9F6C3 5%, #99E6B3, #69D6A3)}
+#txtcontent.ni{ background: linear-gradient(135deg, #f6cfc3 5%, #e6ae99, #d67969)}
+#txtcontent.in{ background: linear-gradient(135deg, #ACA9F6 5%, #7C89E6, #6C69D6)}
+#txtcontent.rb{ background: linear-gradient(135deg, #F6A9BC 5%, #E6799C, #D6597C)}
+#all.al{border-top: 4px solid #C4D649}
+#all.ga{border-top: 4px solid #49D6A3}
+#all.ni{border-top: 4px solid #d66849}
+#all.in{border-top: 4px solid #5C49D6}
+#all.rb{border-top: 4px solid #D6497C}
+#navbar ul a#active{
+	height: 100%; 
+	width: 15%; 
+	border-top: 4px solid #FFF; 
+	font-weight: bold
+}
+#null{ cursor:not-allowed; }
+
+/*footer*/
+#footer{
+	width: 80%;
+	margin: auto;
+}
+#footer hr{
+	height: 6px;
+	background: #EAEAEA;
+	border: 0;
+	border-bottom: 2px solid #303030;
+}
+#footer p{
+	width: 100%;
+	text-align: center;
+	color: #303030;
+	margin: 0;
+}
+.bold{
+	font-weight: bold;
+	padding: 5px;
+}
+
+/*cover*/
+#cover{
+	height: 100%;
+	overflow: hidden;
+}
+#navbar{
+	height: 8%;
+	width: 80%;
+	display: flex;
+	margin: auto;
+	margin-top: 20px;
+	align-items: flex-end;
+}
+#navbar ul{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: flex-end;
+	margin: 0px;
+	padding: 0px;
+	border-bottom: 4px solid #EAEAEA;
+}
+#navbar ul a{
+	height: 80%;
+	width: 10%;
+	margin: 0px;
+	margin-right: 4px;
+	background: #EAEAEA;
+}
+#navbar ul li{
+	height: 100%;
+	width: 100%;
+	padding: 10px;
+	display: inline-block;
+	text-align: center;
+	color: #303030;
+}
+#txtcontent{
+	height: 92%;
+	width: 80%;
+	margin: auto;
+	box-shadow: 0px 5px 10px 5px rgba(0,0,0,.4);
+	justify-content: center;
+}
+#txtcontent #title{
+	width: 100%;
+	height: 35%;
+	padding-top: 5%;
+}
+#txtcontent #title *{
+	width: 100%;
+	display: block;
+	margin: -30px 0px;
+	padding: 0px;
+	text-align: center;
+}
+#title h1{
+	font-size: 150px;
+	color: #FFF;
+	text-shadow: 1px 0 0 #000,0 1px 0 #000,-1px 0 0 #000,0 -1px 0 #000;
+}
+#title h3{
+	font-size: 32px;
+	color: #303030;
+}
+#instructions{
+	width: 80%;
+	margin: auto;
+	height: 65%;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+}
+.ins-image{
+	display: inline-block;
+	float: left;
+	object-fit: contain;
+}
+.ins-image img{
+	height: 100%;
+	object-fit: contain;
+}
+/*content below*/
+#front{
+	width: 100%;
+	height: 40%;
+	padding: 10px;
+	margin-top: 25px;
+	text-align: center;
+  }
+#front img{
+	height: 100%;
+}
+#all{
+	width: 80%;
+	margin: auto;
+	background: #EAEAEA;
+	padding: 20px;
+	box-shadow: 0px 10px 10px 5px rgba(0,0,0,.4);
+}
+.wrapper{
+	width: 33.33333333%; 
+	padding: 10px;
+	float: left;
+	overflow: hidden;
+	height: auto;
+	display: inline-block;
+}
+.student{
+	width: 100%;
+	margin: auto;
+	border: 2px solid #000;
+	border-radius: 8px;
+	overflow: hidden;
+	height: fit-content;
+}
+.content{
+	width: 100%;
+	display: flex;
+	object-fit: contain;
+}
+.container{
+	position: relative;
+	display: inline-block;
+	width: 50%;
+	overflow: hidden;
+}
+.container::after {
+	content: "";
+	display: block;
+	padding-bottom: 140%;
+}
+.desc{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: arial;
+	height: 50px;
+	width: 100%;
+	border-top: 1px solid #000;
+	background: #F8F8F8;
+}
+#d-2{
+	border-right: 1px solid #000;
+	width: 100%;
+}
+.desc h3{
+	font-size: 18px;
+	margin: 0px auto;
+	padding: 0px;
+	width: 100%;
+	text-align: center;
+}
+.ins{
+	width: 100%;
+	height: auto;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.empty{
+	display: block;
+}
+
+/*viewer code*/
+#viewer{
+	display: none;
+	background: rgba(200,200,200,0.6);
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	padding: 20px 10px;
+}
+#viewer #exitbar{
+	height: 10%;
+	background: #FFF;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#viewer #svgwrap{
+	height: 80%;
+}
+#viewer svg{
+	height: 100%;
+	cursor: pointer;
+}
+#viewer canvas{
+	height: 90%;
+}
+#viewer #imageviewer{
+	width: 100%;
+	height: 90%;
+	background: #000;
+	border: 4px solid #EAEAEA;
+}
+#viewer #image{
+	height: 100%;
+	min-width: 100px;
+	margin: auto;
+	display: flex;
+	justify-content: center;
+}
+#viewer #img{
+	height: 100%;
+}
+
+/*mobile optimization*/
+@media only screen and (max-width: 880px){
+	#cover{
+		height: 98%;
+	}
+	#navbar, #txtcontent, #all{
+		height: auto;
+	}
+	#txtcontent, #navbar, #all{
+		width: 95%;
+		margin: auto;
+	}
+	#txtcontent{
+		padding: 20px 0px;
+	}
+	#navbar{margin-top: 10px}
+	#navbar ul{
+		display: block;
+	}
+	#navbar ul a, #navbar ul a#active{
+		height: 100%;
+		width: 100%;
+		float: left;
+		margin: 0px;
+	}
+	#navbar ul li{
+		display: inline-block;
+	}
+	.wrapper{
+		width: 100%;
+	}
+	#txtcontent #title{
+		height: auto;
+		padding-bottom: 30px;
+	}
+	#instructions{
+		width: auto;
+		overflow-y: scroll;
+		display: block;
+		margin: auto;
+		height: 60%;
+	}
+	#instructions .ins-image{
+		width: 100%;
+	}
+	.ins-image{
+		width: 100%;
+		text-align: center;
+	}
+	#lang{
+		position: static;
+		text-align: center;
+		height: 2%;
+	}
+	#hide{
+		display: none;
+	}
+}
+/* Mobile optimization for iPhone 13 and above */
+@media only screen and (max-width: 428px) {
+ #cover {
+height: 98%;
+ }
+	
+
+	
+ #navbar,
+ #txtcontent,
+ #all {
+height: auto;
+ }
+	
+
+	
+ #txtcontent,
+ #navbar,
+ #all {
+width: 95%;
+margin: auto;
+ }
+	
+
+	
+ #txtcontent {
+padding: 20px 0px;
+ }
+	
+
+	
+ #navbar {
+margin-top: 10px;
+ }
+	
+
+	
+ #navbar ul {
+display: block;
+ }
+	
+
+	
+ #navbar ul a,
+ #navbar ul a#active {
+height: 100%;
+width: 100%;
+float: left;
+margin: 0px;
+ }
+	
+
+	
+ #navbar ul li {
+display: inline-block;
+ }
+	
+
+	
+ .wrapper {
+width: 100%;
+ }
+	
+
+	
+ #txtcontent #title {
+height: auto;
+padding-bottom: 30px;
+ }
+	
+
+	
+ #instructions {
+width: auto;
+overflow-y: scroll;
+display: block;
+margin: auto;
+height: 60%;
+ }
+	
+
+	
+ #instructions .ins-image {
+width: 100%;
+ }
+	
+
+	
+ .ins-image {
+width: 100%;
+text-align: center;
+ }
+	
+
+	
+ #lang {
+position: static;
+text-align: center;
+height: 2%;
+ }
+	
+
+	
+ #hide {
+display: none;
+ }
+	}

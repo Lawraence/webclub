@@ -1,0 +1,101 @@
+html{
+	overflow-y: scroll;
+
+}
+body{
+	margin: 0px;
+	background: #FF0000;
+}
+body *{
+	box-sizing: border-box;
+}
+#c{
+	border: 4px solid #EAEAEA;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.clearfix {
+   overflow: auto;
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+#all{
+	width: 80%;
+	margin: auto;
+	background: #DADADA;
+	padding: 20px;
+	box-shadow: 0px 0px 5px 5px rgba(255,255,255,.6);
+}
+.wrapper{
+	width: 33.33333333%; 
+	padding: 10px;
+	float: left;
+	overflow: hidden;
+	height: auto;
+	display: inline-block;
+}
+.student{
+	width: 100%;
+	margin: auto;
+	border: 2px solid #000;
+	border-radius: 8px;
+	overflow: hidden;
+}
+.content{
+	width: 100%;
+	display: flex;
+}
+.container{
+	position: relative;
+	display: inline-block;
+	width: 50%;
+	overflow: hidden;
+}
+.container::after {
+	content: "";
+	display: block;
+	padding-bottom: 175%;
+}
+.desc{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: arial;
+	height: 50px;
+	width: 100%;
+	border-top: 1px solid #000;
+	background: linear-gradient(to right, #EAEAEA, #999999);
+}
+.desc h3{
+	font-size: 18px;
+	margin: 0px auto;
+	padding: 0px;
+	width: 100%;
+	text-align: center;
+}
+#d-2{
+	border-right: 1px solid #000;
+}
+.ins{
+	width: 100%;
+	height: auto;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.empty{
+	display: block;
+}
+#viewer{
+	background: rgba(200,200,200,0.6);
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	padding: 10px;
+}

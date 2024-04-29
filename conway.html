@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Conway test</title>
+    <style type="text/css">
+        body{
+            margin: 0px;
+        }
+        #cover{
+        }
+        #wrap{
+            position: absolute;
+            width: 100%; 
+            height: 100%;
+            background: #000;
+            font-family: consolasLoad, consolas;
+            font-size: 1em;
+            color: #00FF00;
+            overflow: hidden;
+            white-space: nowrap;
+            z-index: 1;
+        }
+        h1{
+            position: absolute;
+            top: 8vw;
+            width: 100%;
+            color: #FFF;
+            margin: 0;
+            padding: 0;
+            font-size: 8vw;
+            font-family: bahnschrift;
+            text-align: center;
+            z-index: 99;
+            animation-name: headBounce;
+            animation-iteration-count: infinite;
+            animation-duration: 1.5s;
+            animation-direction: alternate-reverse;
+        }
+        @keyframes headBounce{
+            from{
+                opacity: 0.2;
+            }
+            to{
+                opacity: 0.7;
+            }
+        }
+        @font-face{
+            font-family: consolasLoad;
+            src: url(https://biszweb.club/fonts/Consolas.TTF);
+        }
+    </style>
+</head>
+<body>
+    <div id = "cover">
+        <h1></h1>
+        <div id = "wrap" style = "font-size: 2vw"></div>
+    </div>
+
+    <script type="text/javascript">
+        function $(x){
+            return document.getElementById(x);
+        }
+        //symbols to use, can be multiple
+        var symbols0 = ["-"];
+        var symbols1 = ["*","&","$","@","/"];
+        var itTime = 100;
+
+        //declares length, width, 2d arrays
+        const OBJX = Math.floor($('wrap').offsetHeight/20+5);
+        const OBJY = Math.floor($('wrap').offsetWidth/9+5);
+        var conwayBoard = new Array(OBJX);
+        for(let i=0; i<conwayBoard.length; i++){
+            conwayBoard[i] = new Array(OBJY);
+        }
+        var newBoard = new Array(OBJX);
+        for(let i=0; i<newBoard.length; i++){
+            newBoard[i] = new Array(OBJY);
+        }
+
+        function genBoard(){
+            //conwayBoard random population
+            for(let i=0; i<conwayBoard.length; i++){
+                for(let j=0; j<conwayBoard[i].length; j++){
+                    conwayBoard[i][j] = Math.floor(Math.random()*2);
+                }
+            }
+
+            //newBoard 0 initialization
+            for(let i=0; i<newBoard.length; i++){
+                for(let j=0; j<newBoard[i].length; j++){
+                    newBoard[i][j] = 0;
+                }
+            }
+
+            //printing
+            for(let i=0; i<OBJX; i++){
+                for(let j=0; j<OBJY; j++){
+                    $('wrap').innerHTML += conwayBoard[i][j];
+                }
+                $('wrap').innerHTML += "<br>";
+            }
+        }
+
+        function calc(){
+            for(let i=1; i<OBJX-1; i++){
+                for(let j=1; j<OBJY-1; j++){
+                    //conway rules
+                    sum = conwayBoard[i-1][j-1]+conwayBoard[i][j-1]+conwayBoard[i+1][j-1]+conwayBoard[i-1][j]+conwayBoard[i+1][j]+conwayBoard[i-1][j+1]+conwayBoard[i][j+1]+conwayBoard[i+1][j+1];
+                    if(sum<2 || sum >3){
+                        newBoard[i][j] = 0;
+                    }
+                    else if(sum == 3){
+                        newBoard[i][j] = 1;
+                    }
+                    else{
+                        newBoard[i][j] = conwayBoard[i][j];
+                    }
+                }
+            }
+        }
+
+        function print(){
+            for(let i=0; i<OBJX; i++){
+                for(let j=0; j<OBJY; j++){
+                    conwayBoard[i][j] = newBoard[i][j];
+                    if(conwayBoard[i][j]==0){
+                        $('wrap').innerHTML += symbols0[Math.floor(Math.random()*symbols0.length)];
+                    }
+                    else{
+                        $('wrap').innerHTML += symbols1[Math.floor(Math.random()*symbols1.length)];
+                    }   
+                }
+                $('wrap').innerHTML += "<br>";
+            }
+        }
+
+        genBoard();
+        for(let i=1; i<=9999; i++){
+            setTimeout(() => {
+                calc();
+                $('wrap').innerHTML = "";
+                print();
+            }, i*itTime);
+        }
+    </script>
+</body>
+</html>

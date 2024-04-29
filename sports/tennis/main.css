@@ -1,0 +1,251 @@
+@charset "utf-8";
+/* CSS Document */
+
+body
+{
+    overflow-y: scroll;
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    cursor: url("images/images/cursor.cur"), auto;
+    background: #007935;
+}
+img{
+    width: 100%;
+    height: auto;
+}
+*
+{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: arial;
+}
+h1
+{
+    font: bold 20px tahoma;
+    
+}
+h4,h2
+{
+    font: bold 14px tahoma;
+}
+header,section,aside,nav,footer,article,hgroup
+{
+    display: block;
+}
+#big_wrapper
+{
+    width: 75%;
+    margin: 10px 0px 0px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-flex:1;
+} 
+#top_header
+{
+    background: #fff066;
+    border: 3px solid #007935;
+    padding: 20px;
+    text-align: center;
+    
+}
+#top_menu{
+    
+    
+    background: #fff066;
+    color: #444443;
+    padding: 0px;
+    text-align: center;
+    position: sticky;
+}
+ul.abc li a.active
+{
+    
+    border: none;
+
+    
+    
+}
+
+#top_menu li
+{
+    display: inline-block;
+    border-right: 1px solid #fff066;
+    border-bottom: 1px solid #fff066;
+    list-style: none;
+    padding: 5px;
+    font: bold 14px tahoma;
+
+    float: left;
+   
+    background: #007935;
+    
+    
+}
+#top_menu li:hover
+{
+    display: inline-block;
+    list-style: none;
+    padding: 5px;
+    font: bold 14px tahoma;
+    
+    float: left;
+
+    background: #fff066;
+    
+    
+}
+#top_menu a
+{
+    color: aliceblue;
+    text-decoration: none;
+    
+}
+#top_menu a:hover
+{
+    color: #000;
+    background: #fff066;
+    box-shadow: 1px 1px 2px rgb(0,0,0,.65);
+    
+}
+#new_div
+{
+    display: -webkit-box;
+    -webkit-box-orient:horizontal;
+    
+}
+#main_section
+{
+    border: 1px solid #fff066;
+    -webkit-box-flex:1;
+    margin: 20px;
+    width: 620px;
+    height: 400px; 
+    padding:20px;
+}
+#side_news{
+    width: 20%;
+    border: 1px solid #bbb224;
+    margin: 20px 20px;
+    padding: 30px;
+    background: #dcdcdc;
+    font-family: arial;
+    
+}
+#the_footer
+{
+    text-align: center;
+    padding: 20px;
+    border-top: 2px solid #fff066;
+    bottom: 0;
+    width: 100%;
+   
+}
+#the_footer a{
+    text-decoration: none;
+    color: #fff066;
+}
+#the_footer a:hover{
+    text-decoration: underline;
+}
+.banner
+{
+    width: 100%;
+    height: auto;
+}
+.pics_i
+{
+    width: 100%;
+    height: auto;
+}
+@media only screen and (max-width: 720px)
+{
+    #top_menu li
+    {
+        width: 100%;
+        
+    }
+    #new_div{
+    display: -webkit-box;
+    -webkit-box-orient:vertical; 
+        text-align: center;
+    }
+    #side_news{
+        width: 90%;
+    }
+    #main_section{
+        width: 94%;
+        height: 150px;
+    }
+    *{
+        font-size: 5px;
+    }
+    
+}
+@media only screen and (max-width: 960px)
+{
+    
+     #top_menu li
+    {
+        width: 100%;
+        
+    }
+   
+    #main_section{
+        height: 300px;
+    }
+    *{
+        font-size: 7px;
+    }
+    
+}
+.slowFade {
+    display: flex;
+    align-items: flex-start;
+    background: #fff;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.slowFade .slide img {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    background: #000;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    opacity: 0;
+    transform: scale(1.5) rotate(15deg);
+    -webkit-animation: slowFade 32s infinite;
+            animation: slowFade 32s infinite;
+}
+.slowFade .slide:nth-child(3) img {
+    -webkit-animation-delay: 8s;
+            animation-delay: 8s;
+}
+.slowFade .slide:nth-child(2) img {
+    -webkit-animation-delay: 16s;
+            animation-delay: 16s;
+}
+.slowFade .slide:nth-child(1) img {
+    -webkit-animation-delay: 24s;
+            animation-delay: 24s;
+}
+@keyframes slowFade {
+    25% {
+        opacity: 1;
+        transform: scale(1) rotate(0);
+    }
+    40% {
+        opacity: 0;
+    }
+}
+@-webkit-keyframes slowFade {
+    25% {
+        opacity: 1;
+        transform: scale(1) rotate(0);
+    }
+    40% {
+        opacity: 0;
+    }
+}

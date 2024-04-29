@@ -1,0 +1,334 @@
+body
+{
+	overflow-y: scroll;
+	font-family: arial;
+	display: -webkit-box;
+	-webkit-box-pack: center;
+	background-color: #4B99FF;
+	user-select: none;
+	cursor: url("images/cursor.cur"), auto;
+}
+article
+{
+	background-color: #001497;
+	color: #FFFFFF;
+	padding: 50px;
+}
+*
+{
+	padding: 0px;
+	margin: 0px;
+}
+h1
+{
+	font: bold 25px tahoma;
+}
+h2, h4
+{
+	font: bold 14px tahoma;
+}
+.top_text
+{
+	font: bold 35px tahoma #2832C2;
+}
+header, section, aside, nav, footer, article, hgroup
+{
+	display: block;
+	/*Dislpays an element as a block element, much like a <p> tag or, as Mcqueen put it, a <div> tag - It starts a new line and takes up all available width*/
+}
+#big_wrapper
+{
+	max-width: 1000px;
+	margin: 10px 0px;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-box-flex: 1;
+}
+#top_header
+{
+	background: #FFE100;
+	border: 3px solid #FF0000;
+	padding: 20px;
+	text-align: center;
+	
+}
+#top_menu
+{
+	border-bottom: 3px solid #FF0000;
+	border-left: 3px solid #FF0000;
+	border-right: 3px solid #FF0000;
+	background: #000000;
+	color: #444443;/*does not matter*/
+	text-align: center;
+	padding: 2px;
+}
+#top_menu li
+{
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	list-style: none;
+	padding: 5px;
+	font: bold 14px tahoma;
+	border: 1px solid #FAA900;
+	border-radius: 5px;
+	width: 100px;
+	height: 20px;
+	background: #FFFFFF;
+	cursor: pointer;
+}
+#top_menu a
+{
+	color: #00EEFF;
+	text-decoration: none;
+}
+#top_menu li:hover
+{
+	color: #7900FF;
+	background: #FF7400;
+	box-shadow: 1px 1px 2px rgba(0, 0, 0, .65);
+}
+#new_div
+{
+	display: -webkit-box;
+	-webkit-box-orient: horizontal;
+}
+#main_section
+{
+	border: 1px solid #000000;
+	-webkit-box-flex: 1;
+	margin: 20px;
+	padding: 20px;
+}
+#side_news
+{
+	width: 220px;
+	height: 265px;
+	border: 1px solid #BBB224;
+	margin: 20px 0px;
+	padding: 30px;
+	background: #FFFFFF;
+	font-family: arial;
+}
+#the_footer
+{
+	text-align: center;
+	padding: 20px;
+	border-top: 2px solid #000000;
+}
+#the_footer a
+{
+	text-decoration: none;
+	color: #000000;
+}
+#the_footer a:hover
+{
+	text-decoration: none;
+	color: #0000FF;
+}
+#the_footer p
+{
+	color: #000000;
+}
+.pics_image
+{
+	width: 100%;
+	height: auto;
+}
+.pics_image:hover
+{
+	width: 100%;
+	height: auto;
+	-webkit-transform: scale(1.3);
+  	transform: scale(1.3);
+	cursor: url("images/cursor.cur"), auto;
+}
+.media_table
+{
+	display: block;
+}
+#main_desc
+{
+	color: #EEFF00;
+	font-family: verdana;
+	font-size: 19px;
+}
+#club_students
+{
+	list-style: none;
+	font-family: arial;
+	font-size: 15px;
+}
+#results_links a
+{
+	color: #0000FF;
+	background-color: #FF0000;
+	display: flex;
+	flex-direction: column;
+	margin: 10px;
+	padding: 2px;
+	list-style: none;
+	text-decoration: none;
+	font-family: arial;
+	font-size: 17px;
+	width: 100px;
+	border: 2px solid #000000;
+	border-radius: 2px;
+	height: auto;
+	text-align: center;
+}
+#results_links a:hover
+{
+	color: #FF00FF;
+	background-color: #FF7400;
+}
+#results_categories
+{
+	font-family: tahoma;
+}
+#first_place
+{
+	color: #FFD700;
+	background-color: #0000FF;
+}
+#second_place
+{
+	color: #C0C0C0;
+	background-color: #111111;
+}
+#third_place
+{
+	color: #B08D57;
+	background-color: #FF0000;
+}
+.first_place
+{
+	color: #FFD700;
+	background-color: #0000FF;
+}
+.second_place
+{
+	color: #C0C0C0;
+	background-color: #111111;
+}
+.third_place
+{
+	color: #B08D57;
+	background-color: #FF0000;
+}
+#first_place, #second_place, #third_place
+{
+	width: 300px;
+}
+.first_place, .second_place, .third_place
+{
+	width: 550px;
+}
+#scheldue_links a
+{
+	color: #AA00FF;
+	background-color: #FFDE72;
+	display: flex;
+	flex-direction: column;
+	margin: 10px;
+	padding: 2px;
+	list-style: none;
+	text-decoration: none;
+	font-family: arial;
+	font-size: 17px;
+	width: 250px;
+	border: 2px solid #000000;
+	border-radius: 2px;
+	height: auto;
+	text-align: center;
+}
+#scheldue_links a:hover
+{
+	color: #FF0000;
+	background-color: #00a2FF;
+}
+#scheldue_categories p
+{
+	font-size: 20px;
+}
+#scheldue_date
+{
+	color: #FF0000;
+}
+#scheldue_host
+{
+	color: #FFFF00;
+}
+#scheldue_location
+{
+	color: #00FF00;
+}
+#history_info h3
+{
+	color: #FF8500;
+	text-decoration: underline;
+}
+#history_info h4, p
+{
+	color: #00FF40;
+}
+#credits
+{
+	color: #FFFFFF;
+	font-size: 22px;
+}
+#subcredits, #subcredits a
+{
+	color: #FFFFFF;
+}
+#subcredits a:hover
+{
+	color: #777777;
+}
+#campus_image
+{
+	display: block;
+	width: 400px;
+	height: auto;
+	border: 2px solid #000000;
+}
+#campus_image:hover
+{
+	border: 2px solid #D4AF37;
+}
+#top_button button
+{
+  position: fixed;
+  bottom: 0;
+  left: 95%;
+  border: none;
+  transform: translatex(-50%);
+  padding: 1.75% 1.5%;
+  border-radius: 100%;
+  font-size: 1.25vw;
+  cursor: pointer;
+  background-color: #3255A4;
+  color: #FFFFFF;
+}
+#top_button button:hover
+{
+  background-color: #325588;
+}
+@media only screen and (max-width: 720px)
+{
+	#top_menu li
+	{
+		width: 97.5%;
+	}
+	#new_div
+	{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	#side_news
+	{
+		width: auto;
+		margin: 20px;
+	}
+}

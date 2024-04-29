@@ -1,0 +1,467 @@
+<html>
+<head>
+    <title>3In Gallery</title>
+    <link rel = "stylesheet" href = "main.css">
+    <link rel = "icon" href = "icon.png">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1">
+    <meta charset="utf-8"> 
+</head>
+<body id = "body" class = "in">
+    <div id = "lang">
+        <a href = "javascript:en()">English</a> | <a href = "javascript:zh()">中文</a>
+    </div>
+    <div id = "cover">
+        <div id = "navbar">
+            <ul>
+                <a href = "index.html" style = "border-top: 4px solid #000"><li>Home</li></a>
+                <a href = "3Al.html" class = "al"><li>3Al</li></a>
+                <a href = "3Ga.html" class = "ga"><li>3Ga</li></a>
+                <a href = "3In.html" class = "in" 
+                    id = "active">
+                <li>3In</li></a>
+                <a href = "3Rb.html" class = "rb"><li>3Rb</li></a>
+            </ul>
+        </div>
+        <div id = "txtcontent" class = "in">
+            <div id = "title">
+                <h1>3In</h1>
+                <h3 id = "subtitle">Student Image Gallery</h3>
+            </div>
+            <div id = "instructions">
+                <div class = "ins-image"><img id = "instruct-one" src = "instruct1.png"></div>
+                <div class = "ins-image"><img id = "instruct-two" src = "instruct2.png"></div>
+            </div>
+        </div>
+        <a href = "#all"><svg id = "arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M192 384c-8.188 0-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L192 306.8l137.4-137.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-160 160C208.4 380.9 200.2 384 192 384z"/></svg></a>
+    </div>
+    <div id ="all" class = "clearfix in">
+        <div class = "wrapper">
+            <div class = "student">
+                <div class = "content">
+                    <div class = "container" id = "d-2">
+                        <img class = "ins" id = "img-d-2" src = "in2d/Aiden_Cai.jpg" onClick = "d2(), s0()">
+                    </div>
+                    <div class = "container" id = "d-3">
+                        <img class = "ins" id = "img-d-3" src = "in3d/Aiden-Cai.jpg" onClick = "d3(), s0()">
+                    </div>
+                </div>
+                <div class = "desc">
+                     <h3>Aiden</h3>
+                </div>
+            </div>
+        </div>
+        <div class = "wrapper">
+            <div class = "student">
+                <div class = "content">
+                    <div class = "container" id = "d-2">
+                        <img class = "ins" id = "img-d-2" src = "in2d/Aland_Luo.jpg" onClick = "d2(), s1()">
+                    </div>
+                    <div class = "container" id = "d-3">
+                        <img class = "ins" id = "img-d-3" src = "in3d/Aland-Luo.jpg" onClick = "d3(), s1()">
+                    </div>
+                </div>
+                <div class = "desc">
+                     <h3>Aland</h3>
+                </div>
+            </div>
+        </div>
+        <div class = "wrapper">
+            <div class = "student">
+                <div class = "content">
+                    <div class = "container" id = "d-2">
+                        <img class = "ins" id = "img-d-2" src = "in2d/Alice_Mao.jpg" onClick = "d2(), s2()">
+                    </div>
+                    <div class = "container" id = "d-3">
+                        <img class = "ins" id = "img-d-3" src = "in3d/Alice-Mao.jpg" onClick = "d3(), s2()">
+                    </div>
+                </div>
+                <div class = "desc">
+                     <h3>Alice</h3>
+                </div>
+            </div>
+        </div>
+        <div class = "wrapper">
+            <div class = "student">
+                <div class = "content">
+                    <div class = "container" id = "d-2">
+                        <img class = "ins" id = "img-d-2" src = "in2d/Amber_Xiao.jpg" onClick = "d2(), s3()">
+                    </div>
+                    <div class = "container" id = "d-3">
+                        <img class = "ins" id = "img-d-3" src = "in3d/Amber-Xiao.jpg" onClick = "d3(), s3()">
+                    </div>
+                </div>
+                <div class = "desc">
+                     <h3>Amber</h3>
+                </div>
+            </div>
+        </div>
+        <div class = "wrapper">
+            <div class = "student">
+                <div class = "content">
+                    <div class = "container" id = "d-2">
+                        <img class = "ins" id = "img-d-2" src = "in2d/Apple_Jiang.jpg" onClick = "d2(), s4()">
+                    </div>
+                    <div class = "container" id = "d-3">
+                        <img class = "ins" id = "img-d-3" src = "in3d/Apple-Jiang.jpg" onClick = "d3(), s4()">
+                    </div>
+                </div>
+                <div class = "desc">
+                     <h3>Apple</h3>
+                </div>
+            </div>
+        </div>
+        <div class = "wrapper">
+            <div class = "student">
+                <div class = "content">
+                    <div class = "container" id = "d-2">
+                        <img class = "ins" id = "img-d-2" src = "in2d/Bill_Gong.jpg" onClick = "d2(), s5()">
+                    </div>
+                    <div class = "container" id = "d-3">
+                        <img class = "ins" id = "img-d-3" src = "in3d/Bill-Gong.jpg" onClick = "d3(), s5()">
+                    </div>
+                </div>
+                <div class = "desc">
+                     <h3>Bill</h3>
+                </div>
+            </div>
+        </div>
+        <div class = "wrapper">
+            <div class = "student">
+                <div class = "content">
+                    <div class = "container" id = "d-2">
+                        <img class = "ins" id = "img-d-2" src = "in2d/Candy_Yu.jpg" onClick = "d2(), s6()">
+                    </div>
+                    <div class = "container" id = "d-3">
+                        <img class = "ins" id = "img-d-3" src = "in3d/Candy-Yu.jpg" onClick = "d3(), s6()">
+                    </div>
+                </div>
+                <div class = "desc">
+                     <h3>Candy</h3>
+                </div>
+            </div>
+        </div>
+        <div class = "wrapper">
+            <div class = "student">
+                <div class = "content">
+                    <div class = "container" id = "d-2">
+                        <img class = "ins" id = "img-d-2" src = "in2d/Chloe_Sung.jpg" onClick = "d2(), s7()">
+                    </div>
+                    <div class = "container" id = "d-3">
+                        <img class = "ins" id = "img-d-3" src = "in3d/Chloe-Sung.jpg" onClick = "d3(), s7()">
+                    </div>
+                </div>
+                <div class = "desc">
+                     <h3>Chloe</h3>
+                </div>
+            </div>
+        </div>
+        <div class = "wrapper">
+            <div class = "student">
+                <div class = "content">
+                    <div class = "container" id = "d-2">
+                        <img class = "ins" id = "img-d-2" src = "in2d/Evan_Ma.jpg" onClick = "d2(), s8()">
+                    </div>
+                    <div class = "container" id = "d-3">
+                        <img class = "ins" id = "img-d-3" src = "in3d/Evan-Ma.jpg" onClick = "d3(), s8()">
+                    </div>
+                </div>
+                <div class = "desc">
+                     <h3>Evan</h3>
+                </div>
+            </div>
+        </div>
+        <div class = "wrapper">
+            <div class = "student">
+                <div class = "content">
+                    <div class = "container" id = "d-2">
+                        <img class = "ins" id = "img-d-2" src = "in2d/Felix_Huang.jpg" onClick = "d2(), s9()">
+                    </div>
+                    <div class = "container" id = "d-3">
+                        <img class = "ins" id = "img-d-3" src = "in3d/Felix-Huang.jpg" onClick = "d3(), s9()">
+                    </div>
+                </div>
+                <div class = "desc">
+                     <h3>Felix</h3>
+                </div>
+            </div>
+        </div>
+        <div class = "wrapper">
+            <div class = "student">
+                <div class = "content">
+                    <div class = "container" id = "d-2">
+                        <img class = "ins" id = "img-d-2" src = "in2d/Henry_Wang.jpg" onClick = "d2(), s10()">
+                    </div>
+                    <div class = "container" id = "d-3">
+                        <img class = "ins" id = "img-d-3" src = "in3d/Henry-Wang.jpg" onClick = "d3(), s10()">
+                    </div>
+                </div>
+                <div class = "desc">
+                     <h3>Henry</h3>
+                </div>
+            </div>
+        </div>
+        <div class = "wrapper">
+            <div class = "student">
+                <div class = "content">
+                    <div class = "container" id = "d-2">
+                        <img class = "ins" id = "img-d-2" src = "in2d/Jack_Jiang.jpg" onClick = "d2(), s11()">
+                    </div>
+                    <div class = "container" id = "d-3">
+                        <img class = "ins" id = "img-d-3" src = "in3d/Jack-Jiang.jpg" onClick = "d3(), s11()">
+                    </div>
+                </div>
+                <div class = "desc">
+                     <h3>Jack</h3>
+                </div>
+            </div>
+        </div>
+        <div class = "wrapper">
+            <div class = "student">
+                <div class = "content">
+                    <div class = "container" id = "d-2">
+                        <img class = "ins" id = "img-d-2" src = "in2d/Jerry_Zhang.jpg" onClick = "d2(), s12()">
+                    </div>
+                    <div class = "container" id = "d-3">
+                        <img class = "ins" id = "img-d-3" src = "in3d/Jerry-Zhang.jpg" onClick = "d3(), s12()">
+                    </div>
+                </div>
+                <div class = "desc">
+                     <h3>Jerry</h3>
+                </div>
+            </div>
+        </div>
+        <div class = "wrapper">
+            <div class = "student">
+                <div class = "content">
+                    <div class = "container" id = "d-2">
+                        <img class = "ins" id = "img-d-2" src = "in2d/Ken_Deng.jpg" onClick = "d2(), s13()">
+                    </div>
+                    <div class = "container" id = "d-3">
+                        <img class = "ins" id = "img-d-3" src = "in3d/Ken-Deng.jpg" onClick = "d3(), s13()">
+                    </div>
+                </div>
+                <div class = "desc">
+                     <h3>Ken</h3>
+                </div>
+            </div>
+        </div>
+        <div class = "wrapper">
+            <div class = "student">
+                <div class = "content">
+                    <div class = "container" id = "d-2">
+                        <img class = "ins" id = "img-d-2" src = "in2d/Leo_Zhang.jpg" onClick = "d2(), s14()">
+                    </div>
+                    <div class = "container" id = "d-3">
+                        <img class = "ins" id = "img-d-3" src = "in3d/Leo-Zhang.jpg" onClick = "d3(), s14()">
+                    </div>
+                </div>
+                <div class = "desc">
+                     <h3>Leo</h3>
+                </div>
+            </div>
+        </div>
+        <div class = "wrapper">
+            <div class = "student">
+                <div class = "content">
+                    <div class = "container" id = "d-2">
+                        <img class = "ins" id = "img-d-2" src = "in2d/Max_Yang.jpg" onClick = "d2(), s15()">
+                    </div>
+                    <div class = "container" id = "d-3">
+                        <img class = "ins" id = "img-d-3" src = "in3d/Max-Yang.jpg" onClick = "d3(), s15()">
+                    </div>
+                </div>
+                <div class = "desc">
+                     <h3>Max</h3>
+                </div>
+            </div>
+        </div>
+        <div class = "wrapper">
+            <div class = "student">
+                <div class = "content">
+                    <div class = "container" id = "d-2">
+                        <img class = "ins" id = "img-d-2" src = "in2d/Michelle_Fu.jpg" onClick = "d2(), s16()">
+                    </div>
+                    <div class = "container" id = "d-3">
+                        <img class = "ins" id = "img-d-3" src = "in3d/Michelle-Fu.jpg" onClick = "d3(), s16()">
+                    </div>
+                </div>
+                <div class = "desc">
+                     <h3>Michelle</h3>
+                </div>
+            </div>
+        </div>
+        <div class = "wrapper">
+            <div class = "student">
+                <div class = "content">
+                    <div class = "container" id = "d-2">
+                        <img class = "ins" id = "img-d-2" src = "in2d/Mini_Zong.jpg" onClick = "d2(), s17()">
+                    </div>
+                    <div class = "container" id = "d-3">
+                        <img class = "ins" id = "img-d-3" src = "in3d/Mini-Zong.jpg" onClick = "d3(), s17()">
+                    </div>
+                </div>
+                <div class = "desc">
+                     <h3>Mini</h3>
+                </div>
+            </div>
+        </div>
+        <div class = "wrapper">
+            <div class = "student">
+                <div class = "content">
+                    <div class = "container" id = "d-2">
+                        <img class = "ins" id = "img-d-2" src = "in2d/Molly_Qi.jpg" onClick = "d2(), s18()">
+                    </div>
+                    <div class = "container" id = "d-3">
+                        <img class = "ins" id = "img-d-3" src = "in3d/Molly-Qi.jpg" onClick = "d3(), s18()">
+                    </div>
+                </div>
+                <div class = "desc">
+                     <h3>Molly</h3>
+                </div>
+            </div>
+        </div>
+        <div class = "wrapper">
+            <div class = "student">
+                <div class = "content">
+                    <div class = "container" id = "d-2">
+                        <img class = "ins" id = "img-d-2" src = "in2d/Philip_Gu.jpg" onClick = "d2(), s19()">
+                    </div>
+                    <div class = "container" id = "d-3">
+                        <img class = "ins" id = "img-d-3" src = "in3d/Philip-Gu.jpg" onClick = "d3(), s19()">
+                    </div>
+                </div>
+                <div class = "desc">
+                     <h3>Philip</h3>
+                </div>
+            </div>
+        </div>
+        <div class = "wrapper">
+            <div class = "student">
+                <div class = "content">
+                    <div class = "container" id = "d-2">
+                        <img class = "ins" id = "img-d-2" src = "in2d/Raymond_Liu.jpg" onClick = "d2(), s20()">
+                    </div>
+                    <div class = "container" id = "d-3">
+                        <img class = "ins" id = "img-d-3" src = "in3d/Raymond-Liu.jpg" onClick = "d3(), s20()">
+                    </div>
+                </div>
+                <div class = "desc">
+                     <h3>Raymond</h3>
+                </div>
+            </div>
+        </div>
+        <div class = "wrapper">
+            <div class = "student">
+                <div class = "content">
+                    <div class = "container" id = "d-2">
+                        <img class = "ins" id = "img-d-2" src = "in2d/Ryan_Chan.jpg" onClick = "d2(), s21()">
+                    </div>
+                    <div class = "container" id = "d-3">
+                        <img class = "ins" id = "img-d-3" src = "in3d/Ryan-Chan.jpg" onClick = "d3(), s21()">
+                    </div>
+                </div>
+                <div class = "desc">
+                     <h3>Ryan</h3>
+                </div>
+            </div>
+        </div>
+        <div class = "wrapper">
+            <div class = "student">
+                <div class = "content">
+                    <div class = "container" id = "d-2">
+                        <img class = "ins" id = "img-d-2" src = "in2d/Sharon_Zhang.jpg" onClick = "d2(), s22()">
+                    </div>
+                    <div class = "container" id = "d-3">
+                        <img class = "ins" id = "img-d-3" src = "in3d/Sharon-Zhang.jpg" onClick = "d3(), s22()">
+                    </div>
+                </div>
+                <div class = "desc">
+                     <h3>Sharon</h3>
+                </div>
+            </div>
+        </div>
+        <div class = "wrapper">
+            <div class = "student">
+                <div class = "content">
+                    <div class = "container" id = "d-2">
+                        <img class = "ins" id = "img-d-2" src = "in2d/Troy_Zong.jpg" onClick = "d2(), s23()">
+                    </div>
+                    <div class = "container" id = "d-3">
+                        <img class = "ins" id = "img-d-3" src = "in3d/Troy-Zong.jpg" onClick = "d3(), s23()">
+                    </div>
+                </div>
+                <div class = "desc">
+                     <h3>Troy</h3>
+                </div>
+            </div>
+        </div>
+        <div class = "wrapper">
+            <div class = "student">
+                <div class = "content">
+                    <div class = "container" id = "d-2">
+                        <img class = "ins" id = "img-d-2" src = "in2d/Victor_Huang.jpg" onClick = "d2(), s24()">
+                    </div>
+                    <div class = "container" id = "d-3">
+                        <img class = "ins" id = "img-d-3" src = "in3d/Victor-Huang.jpg" onClick = "d3(), s24()">
+                    </div>
+                </div>
+                <div class = "desc">
+                     <h3>Victor</h3>
+                </div>
+            </div>
+        </div>
+        <div class = "wrapper">
+            <div class = "student">
+                <div class = "content">
+                    <div class = "container" id = "d-2">
+                        <img class = "ins" id = "img-d-2" src = "in2d/William_Zou.jpg" onClick = "d2(), s25()">
+                    </div>
+                    <div class = "container" id = "d-3">
+                        <img class = "ins" id = "img-d-3" src = "in3d/William-Zou.jpg" onClick = "d3(), s25()">
+                    </div>
+                </div>
+                <div class = "desc">
+                     <h3>William</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id = "footer">
+        <hr>
+        <p class = "bold">&copy;2022 BISZ Coding and Web Design</p>
+        <p>G3 Image Gallery Project</p>
+        <p>&nbsp;</p>
+    </div>
+    <div id = "viewer">
+        <div id = "exitbar">
+            <div id = "svgwrap">
+                <svg onClick = "exit()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+            </div>
+        </div>
+        <canvas id = "c"></canvas>
+        <div id = "imageviewer">
+            <div id = "image">
+                <img id = "img" src = "">
+            </div>
+        </div>
+        <script src = "jsassets\three.min.js"></script>
+        <script src = "jsassets\OrbitControls.js"></script>
+        <script src = "jsassets\LoaderSupport.js"></script>
+        <script src = "jsassets\OBJLoader2.js"></script>
+        <script src = "jsassets\MTLLoader.js"></script>
+        <script src = "jsassets\mainIn.js"></script>
+        <script type="text/javascript">
+            function en(){
+                document.getElementById("instruct-one").src = "instruct1.png";
+                document.getElementById("instruct-two").src = "instruct2.png";
+                document.getElementById("subtitle").innerHTML = "Student Image Gallery";
+            }
+            function zh(){
+                document.getElementById("instruct-one").src = "instruct1-zhcn.png";
+                document.getElementById("instruct-two").src = "instruct2-zhcn.png";
+                document.getElementById("subtitle").innerHTML = "学生作品展";
+            }
+        </script>
+    </div>
+</body>
+</html>

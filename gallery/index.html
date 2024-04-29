@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <title>Image Gallery Project</title>
+        <link rel = "stylesheet" href = "index-main.css">
+        <link rel = "icon" href = "icon.png">
+        <meta name = "viewport" content = "width=device-width, initial-scale=1">
+        <meta charset = "utf-8">
+    </head>
+    <body>
+        <div id = "lang">
+            <a href = "javascript:en()">English</a> | <a href = "javascript:zh()">中文</a>
+        </div>
+        <div id = "cover">
+            <div id = "navbar">
+                <ul>
+                    <a href = "index.html" id = "active" style = "border-top: 4px solid #FFF"><li>Home</li></a>
+                    <a href = "3Al.html" class = "al"><li>3Al</li></a>
+                    <a href = "3Ga.html" class = "ga"><li>3Ga</li></a>
+                    <a href = "3In.html" class = "in"><li>3In</li></a>
+                    <a href = "3Rb.html" class = "rb"><li>3Rb</li></a>
+                </ul>
+            </div>
+            <div id = "txtcontent">
+                <div id = "title">
+                    <h1 id = "edittitle">Image Gallery</h1>
+                    <h3 id = "subtitle">A Student-Driven Project</h3>
+                </div>
+                <div id = "front">
+                    <img src = "front1.png">
+                    <img src = "x.png">
+                    <img src = "front2.png">
+                </div>
+            </div>
+        </div>
+        <div id = "all" class = "clearfix">
+            <div class = "bar clearfix">
+                <p id = "text1">
+                    The Pixel Art Project is the creation of Ms. Perla’s Grade 3 art class, as part of an initiative to add more creativity and significance to distance learning. For the project, students started with 2D pixel art, illustrating either a self-portrait or a character from video games like Minecraft or Among Us. Students then took the project to Mr. Davison’s engineering and technology class, utilizing Tinkercad, a 3D modeling program, to literally "add another dimension" to their artwork. The project demanded creativity, originality, and exercised students’ ability to form cross-curricular connections - nonetheless, each student exhibited their best effort, and many were able to produce elegant, unique illustrations and 3D models. 
+                </p>
+                <img src = "icon-paint3d.png">
+            </div>
+            <div class = "bar clearfix">
+                <img src = "icon-webdev.svg">
+                <p id = "text2">
+                    For the next phase of the project, middle and upper school students in the coding and web design elective (also taught by Mr.D), developed a website to showcase and publish the younger students’ work. The 2D pixel art and 3D representations would be displayed side by side in the Image Gallery Project; these students spent several weeks using HTML5/CSS/JS to perfect the aesthetics and functionality of the site. The project involved a great deal of logistical planning and organization, with nearly 500 unique files that had to be optimized and uploaded to the web server. 
+                </p>
+            </div>
+            <div class = "bar clearfix">
+                <p id = "text3">
+                    Incorporating multidisciplinary knowledge and skills acquired throughout the year, the project required over one hundred students from different grade levels, who each demonstrated an impressive capacity for creativity and problem-solving. And the result is this website and its contents - a professional platform to publish equally impressive student work.
+                </p>
+                <img src = "icon-threejs.png">
+            </div>
+            <div class = "bar clearfix">
+                <img src = "icon-tinker.svg">
+                <p id = "text4">
+                    Special commendation to Grade 11 student, Joshua Zhan for his assistance with server-side development, three.js deployment and implementation, and processes automation. 
+                </p>
+            </div>
+        </div>
+        <div id = "footer">
+            <hr>
+            <p class = "bold">&copy;2022 BISZ Coding and Web Design</p>
+            <p>G3 Image Gallery Project</p>
+            <p>&nbsp;</p>
+        </div>
+        <script type="text/javascript">
+            function en(){
+                document.getElementById("subtitle").innerHTML = 'A Student-Driven Project';
+                document.getElementById("edittitle").innerHTML = 'Image Gallery';
+                document.getElementById("text1").innerHTML = 'The Pixel Art Project is the creation of Ms. Perla’s Grade 3 art class, as part of an initiative to add more creativity and significance to distance learning. For the project, students started with 2D pixel art, illustrating either a self-portrait or a character from video games like Minecraft or Among Us. Students then took the project to Mr. Davison’s engineering and technology class, utilizing Tinkercad, a 3D modeling program, to literally "add another dimension" to their artwork. The project demanded creativity, originality, and exercised students’ ability to form cross-curricular connections - nonetheless, each student exhibited their best effort, and many were able to produce elegant, unique illustrations and 3D models. ';
+                document.getElementById("text2").innerHTML = 'For the next phase of the project, middle and upper school students in the coding and web design elective (also taught by Mr.D), developed a website to showcase and publish the younger students’ work. The 2D pixel art and 3D representations would be displayed side by side in the Image Gallery Project; these students spent several weeks using HTML5/CSS/JS to perfect the aesthetics and functionality of the site. The project involved a great deal of logistical planning and organization, with nearly 500 unique files that had to be optimized and uploaded to the web server.';
+                document.getElementById("text3").innerHTML = 'Incorporating multidisciplinary knowledge and skills acquired throughout the year, the project required over one hundred students from different grade levels, who each demonstrated an impressive capacity for creativity and problem-solving. And the result is this website and its contents - a professional platform to publish equally impressive student work. ';
+                document.getElementById("text4").innerHTML = 'Special commendation to Grade 11 student, Joshua Zhan for his assistance with server-side development, three.js deployment and implementation, and processes automation. ';
+            }
+            function zh(){
+                document.getElementById("subtitle").innerHTML = '学生驱动的项目';
+                document.getElementById("edittitle").innerHTML = '学生作品展';
+                document.getElementById("text1").innerHTML = '为了在远程学习中增加更多创造力和意义，像素艺术是Ms.Perla在三年级艺术课程中所增加的项目。在该项目中，学生们将从 2D 像素艺术开始，制作自画像或电子游戏中的角色，比如说《我的世界》 或者《太空狼人杀》中的人物等。然后，学生们将会把这个项目带到Mr.Davison的工程课上，利用 3D 建模软件 "Tinkercad" 为他们的作品“增添更多维度”。该项目需要创造力、个人思考能力，并且锻炼学生形成不同学科中间联想的能力。不仅如此，每个学生都将使出浑身解数，从而制作出美观、独特的插图以及配对的 3D 模型。';
+                document.getElementById("text2").innerHTML = '在该项目的下一阶段，编程和网页设计的选修课（同样由 Mr. Davison 讲授）领导高年级学生开发并且完善了一个互联网前端网站来展示和发布低年级学生的在上一阶段所制作的成品。 低年级学生们将自己制作的多种多样的作品由高年级学生借助 HTML5/CSS/JS 等先进前端技巧来完善的网站所展示。该网站的用户体验以及理论功能均被学生花费大量时间优化。与此同时，项目也涉及大量的网络后端规划和组织，有诸如将近500个各不相同的文件精心优化并上传到网络服务器的任务等。 ';
+                document.getElementById("text3").innerHTML = '本项目结合了全年学习的多学科知识和跨学科的技能，并且由来自不同年级的一百多名学生完成。他们每个人都表现出令人印象深刻的创造力和解决问题的能力。最终做出了一个具有学生风格且令人感触良多的学生作品网站。';
+                document.getElementById("text4").innerHTML = '特别表扬 11 年级学生 Joshua Zhan 在服务器端开发、three.js 部署和实施以及流程自动化方面的协助。';
+            }
+        </script>
+    </body>
+</html>

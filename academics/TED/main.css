@@ -1,0 +1,123 @@
+.image{
+    width: 60%;
+    margin: auto;
+    display: block;
+}
+body{
+    font-family: arial;
+    box-sizing: border-box;
+    margin: 0px;
+}
+.start{
+    height: 100vh;
+    background-image: url("assets/images/stage-paceholedr.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#ts{
+    position: absolute;
+    top: 50%;
+    transform: translate(10%, -50%);
+
+}
+#title{
+    top: inherit;
+    float: inherit;
+    font-size: 6em;
+    color: white;
+    font-weight: 700;
+}
+#slogan{
+    filter: opacity(2);
+    color: white;
+    text-align: center;  
+}
+.content-wrapper{ 
+    height: 100vh;
+}
+.bgImg{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0, 0.5);
+    z-index: 2;
+}
+.navbar{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    font-size: 16px;
+    display: flex;
+    flex-direction: row;
+    background-color: #2d2d2d;
+    position: sticky;
+    top: 0px;
+}
+.tab{
+    text-align: center;
+    padding: 5px 2px;
+    width: 65px;
+}
+.tab a{
+    text-decoration: none;
+    color: white;
+}
+.tab a:hover{
+    color: rgb(73, 73, 205)
+}
+::-webkit-scrollbar-track
+{
+    background-color: rgba(0,0,0,.0);
+}
+
+::-webkit-scrollbar
+{
+	width: 7.5px;
+	background-color: rgba(255, 255, 255, 50);
+}
+
+::-webkit-scrollbar-thumb
+{
+	border-radius: 3px;
+	background-color: #2d2d2d;
+}
+.content{
+    padding: 20px;
+    height: 100%;
+}
+
+.text {
+    font-size: medium;
+    text-indent: 30px;
+    text-align: justify;
+    padding-bottom: 16px;
+    padding: 8px 0px;
+}
+.heading{
+    font-size: 1.75rem;
+    text-align: center;
+}
+.footer{
+    position: relative;
+    top: 50%;
+    text-align: center;
+    position: sticky;
+    bottom: 0px;
+    background-color: rgb(134, 133, 133);
+    color: rgb(255, 255, 255);
+}
+@media (max-width: 1200px) {
+    #title{
+        font-size: 3em;
+    }
+    td.tab{
+        font-size: 16px;
+    }
+    .content{
+        font-size: 12.8px;
+    }
+    /*about is too full so no image in mobile*/
+    #gone{
+        display: none !important;
+    }
+}

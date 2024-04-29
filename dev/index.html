@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Developers' Club</title>
+	<style>
+		body{
+			margin: 0;
+			background: #101010;
+		}
+		#bubble{
+			background: #000;
+			width: max-content;
+			padding: 5px 15px;
+			margin: auto;
+			border-radius: 20px;
+
+			text-align: center;
+			font-family: consolas;
+			font-size: 22px;
+			color: #FFF;
+
+			transition: 0.5s;
+		}
+		#bubble:hover{
+			color: #00AA00;
+			transition: 0.5s;
+			box-shadow: 0px 0px 4px 1px rgba(255,255,255,0.4);
+			cursor: pointer;
+		}
+		#topbar{
+			background: #303030;
+			padding: 10px 0px;
+		}
+
+		#title{
+			font-family: BlueScreen;
+			font-weight: normal;
+			font-size: 10vw;
+			padding: 100px;
+			padding-bottom: 20px;
+			margin: 0;
+			color: #00AA00;
+			text-shadow: 0 0 15px rgba(200,255,200,.5);
+		}
+
+		.abstract{
+			padding: 0;
+			padding-left: 100px;
+			font-family: BlueScreen;
+			color: #00AA00;
+			margin: 0;
+			font-size: 2vw;
+			text-shadow: 0 0 10px rgba(200,255,200,.5);
+		}
+        #wrap{
+            position: absolute;
+			top: 0;
+            width: 100%; 
+            height: 100%;
+            font-family: Consolas;
+			font-weight: bold;
+            color: #FFF;
+            overflow: hidden;
+            white-space: nowrap;
+            z-index: -1;
+			opacity: .2;
+			filter: blur(1px);
+        }
+		#frame{
+			height: 50%;
+			width: 100%;
+			padding: 0px 100px;
+			box-sizing: border-box;
+			overflow-y: auto;
+			overflow-x: hidden;
+		}
+		iframe{
+			width: 100%;
+			height:100%;
+			color: #FFF;
+			border: 0;
+			background: #000;
+			border-radius:10px;
+			padding: 10px;
+			opacity: .6;
+		}
+		@font-face{
+            font-family: BlueScreen;
+            src: url(https://biszweb.club/fonts/bluescreen.ttf);
+        }
+
+        @font-face{
+            font-family: CommandPrompt;
+            src: url(https://biszweb.club/fonts/windows_command_prompt.ttf);
+        }
+
+		@font-face{
+            font-family: Consolas;
+            src: url(https://biszweb.club/fonts/Consolas.TTF);
+        }
+	</style>
+</head>
+<body>
+	<!-- <div id = "topbar"><div id = "bubble">Developers' Club</div></div> -->
+	<h1 id = "title">hello world</h1>
+	<p class = "abstract">join us beyond the surface of the digital matrix</p>
+	<p class = "abstract">we show you how deep the rabbit-hole goes, and technology will never be the same again</p>
+	<br>
+	<div id = "frame">
+		<iframe src = "https://biszweb.club/names.html"></iframe>
+	</div>
+	
+	<div id = "wrap" style = "font-size: 2vw"></div>
+
+	<script type="text/javascript">
+        function $(x){
+            return document.getElementById(x);
+        }
+        //symbols to use, can be multiple
+        var symbols0 = ["-"];
+        var symbols1 = ["*","&","$","@","/"];
+        var itTime = 1000;
+
+        //declares length, width, 2d arrays
+        const OBJX = Math.floor($('wrap').offsetHeight/20+5);
+        const OBJY = Math.floor($('wrap').offsetWidth/9+5);
+        var conwayBoard = new Array(OBJX);
+        for(let i=0; i<conwayBoard.length; i++){
+            conwayBoard[i] = new Array(OBJY);
+        }
+        var newBoard = new Array(OBJX);
+        for(let i=0; i<newBoard.length; i++){
+            newBoard[i] = new Array(OBJY);
+        }
+
+        function genBoard(){
+            //conwayBoard random population
+            for(let i=0; i<conwayBoard.length; i++){
+                for(let j=0; j<conwayBoard[i].length; j++){
+                    conwayBoard[i][j] = Math.floor(Math.random()*2);
+                }
+            }
+
+            //newBoard 0 initialization
+            for(let i=0; i<newBoard.length; i++){
+                for(let j=0; j<newBoard[i].length; j++){
+                    newBoard[i][j] = 0;
+                }
+            }
+
+            //printing
+            for(let i=0; i<OBJX; i++){
+                for(let j=0; j<OBJY; j++){
+                    $('wrap').innerHTML += conwayBoard[i][j];
+                }
+                $('wrap').innerHTML += "<br>";
+            }
+        }
+
+        function calc(){
+            for(let i=1; i<OBJX-1; i++){
+                for(let j=1; j<OBJY-1; j++){
+                    //conway rules
+                    sum = conwayBoard[i-1][j-1]+conwayBoard[i][j-1]+conwayBoard[i+1][j-1]+conwayBoard[i-1][j]+conwayBoard[i+1][j]+conwayBoard[i-1][j+1]+conwayBoard[i][j+1]+conwayBoard[i+1][j+1];
+                    if(sum<2 || sum >3){
+                        newBoard[i][j] = 0;
+                    }
+                    else if(sum == 3){
+                        newBoard[i][j] = 1;
+                    }
+                    else{
+                        newBoard[i][j] = conwayBoard[i][j];
+                    }
+                }
+            }
+        }
+
+        function print(){
+            for(let i=0; i<OBJX; i++){
+                for(let j=0; j<OBJY; j++){
+                    conwayBoard[i][j] = newBoard[i][j];
+                    if(conwayBoard[i][j]==0){
+                        $('wrap').innerHTML += symbols0[Math.floor(Math.random()*symbols0.length)];
+                    }
+                    else{
+                        $('wrap').innerHTML += symbols1[Math.floor(Math.random()*symbols1.length)];
+                    }   
+                }
+                $('wrap').innerHTML += "<br>";
+            }
+        }
+
+        genBoard();
+        // for(let i=1; i<=999; i++){
+        //     setTimeout(() => {
+        //         calc();
+        //         $('wrap').innerHTML = "";
+        //         print();
+        //     }, i*itTime);
+        // }
+
+        const wait = (ms) => new Promise(resolve => setTimeout(resolve, ms))
+
+        const loop = async () => {
+            for (let i=1; i<=999; i++) {
+                calc();
+                $('wrap').innerHTML = "";
+                print();
+                await wait(750)
+            }
+        }
+        loop()
+    </script>
+</body>
+</html>

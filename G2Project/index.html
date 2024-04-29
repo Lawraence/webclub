@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <title>Pixel Gallery Project</title><!--Fix the images-->
+        <link rel = "stylesheet" href = "index-main.css">
+        <link rel = "icon" href = "icon.png">
+        <meta name = "viewport" content = "width=device-width, initial-scale=1">
+        <meta charset = "utf-8">
+        
+    </head>
+    <body>
+        <div id = "lang">
+            <a href = "javascript:en()">English</a> | <a href = "javascript:zh()">中文</a>
+        </div>
+        <div id = "cover">
+            <div id = "navbar">
+                <ul>
+                    <a href = "index.html" id = "active" style = "border-top: 4px solid #FFF"><li>Home</li></a>
+                    <a href = "2Y.html" class = "k"><li>2Y</li></a>
+                    <a href = "2Ni.html" class = "h"><li>2Ni</li></a>
+                    <a href = "2Cu.html" class = "er"><li>2Cu</li></a>
+                    <a href = "2Co.html" class = "h"><li>2Co</li></a>
+                </ul>
+            </div>
+            <div id = "txtcontent">
+                <div id = "title">
+                    <h1 id = "edittitle">Pixel Gallery</h1>
+                    <h3 id = "subtitle">A Student-Driven Project</h3>
+                </div>
+                <div id="front">
+                    <img src="main_image/paint.png">
+                    <img src="main_image/x.png">
+                    <img src="main_image/website.png">
+                </div>
+            </div>
+        </div>
+        <div id = "all" class = "clearfix">
+            <div class = "bar clearfix">
+                <img src="main_image/bedrock.png">
+                <p id = "text1">
+                    The Pixel Gallery Project is the creation of Ms. Perla's Grade 2 art class, as part of an initiative to discover the beauty of individual design. For the project, students started with 2D pixel art, illustrating either a self-portrait or a character in the style of a Minecraft character. The project demanded extensive details by creating characters in the style of Minecraft, and great effort in generating individual works. Each student created creative and quality work in the time given.
+                </p>
+            </div>
+            <div class = "bar clearfix">
+                <p id = "text2">
+                    For the next phase of the project, middle school students in the Coding and Web design elective (taught by Mr. Davison), developed a website to showcase and publish the younger students' work. The 2D pixel is displayed in an element-specific gallery. You can enlarge the images by tapping/clicking on them. Students spent several weeks using web languages such as HTML5/CSS/JS to perfect the aesthetics and functionality of the site.
+                </p>
+                <img src="main_image/HCJ.png">
+            </div>
+            <div class = "bar clearfix">
+                <img src="main_image/watermelon.png">
+                <p id = "text3">
+                    The new Pixel Gallery project demanded a tremendous deal of time and energy from the students. Still, impressively, our students finished the development with great care and design.
+                </p>
+            </div>
+        </div>
+        <div id = "footer">
+            <hr>
+            <p class = "bold" id="copy">&copy;2024 BISZ Coding and Web Design</p>
+            <p id="project">G2 Pixel Gallery Project</p>
+            <p>&nbsp;</p>
+        </div>
+        <script type="text/javascript">
+            /*Change this later2*/
+            function en() {
+                document.getElementById("subtitle").innerHTML = 'A Student-Driven Project';
+                document.getElementById("edittitle").innerHTML = 'Minecraft Image Gallery';
+                document.getElementById("text1").innerHTML = "The Pixel Gallery Project is the creation of Ms. Perla's Grade 2 art class, as part of an initiative to discover the beauty of individual design. For the project, students started with 2D pixel art, illustrating either a self-portrait or a character in the style of a Minecraft character. The project demanded extensive details by creating characters in the style of Minecraft, and great effort in generating individual works. Each student created creative and quality work in the time given.";
+                document.getElementById("text2").innerHTML = "For the next phase of the project, middle school students in the Coding and Web design elective (taught by Mr. Davison), developed a website to showcase and publish the younger students' work. The 2D pixel is displayed in an element-specific gallery. You can enlarge the images by tapping/clicking on them. Students spent several weeks using web languages such as HTML5/CSS/JS to perfect the aesthetics and functionality of the site.";
+                document.getElementById("text3").innerHTML = "The new Pixel Gallery project demanded a tremendous deal of time and energy from the students. Still, impressively, our students finished the development with great care and design.";
+                document.getElementById("text4").innerHTML = "Special commendation to Grade 8 student, Larry Lee and G12 student, Joshua Zhan for their assistance with server side configuration and debugging.";
+                document.getElementById("copy").innerHTML="&copy;2023 BISZ Coding and Web Design";
+                document.getElementById("project").innerHTML="G2 Pixel Gallery Project";
+            }
+            function zh() {
+                document.getElementById("subtitle").innerHTML = '一个由学生驱动的项目';
+                document.getElementById("edittitle").innerHTML = '像素画学生作品展';
+                document.getElementById("text1").innerHTML = '像素艺术是Ms.Perla在二年级艺术课程中所增加的项目，其目的是为学生奠定对自由设计的兴趣。在该项目中，学生们通过 2D 像素艺术开始，通过选取自画像或是其他作品（包括但不限于故事，游戏和动漫）里的人物，再将其以游戏《我的世界》中人物的样式构建，创造出自己独一无二的画像。在第一步中，在有限的时间内以《我的世界》的形式绘画出富有创造性的人物，无疑是对学生的一大挑战。不过，所有的学生都创造出了自己新硕而又精巧的绘画。';
+                document.getElementById("text2").innerHTML = '在下一阶段，来自本校编程与网站设计选修课的中学生，将建立一个用于展示并发表这些像素艺术的网站。低年级所创造的2D像素画作将在同一页面上展出。在此阶段，学生们利用对网站设计的理解，通过编程语言如HTMl、CSS和JS完善该网站的样式与功能。从之前高中学生所创造的一个艺术展网站，将其一步步改造为新的网站，要求学生们进行大量对图片和排版的改动。';
+                document.getElementById("text3").innerHTML = '原画展网站充满了复杂且高深的各种程序，而修改这些程序更是难上加难。我们的中学生无疑需要付出大量时间与精神，以求改进代码。不过，我们的学生依然在建造次网站时通过他们的过往的经验，达到了高度的创造性。';
+                document.getElementById("text4").innerHTML = '在此，特别感谢8年级学生Larry Lee，他在网站样式设计与程序试错帮助了许多。';
+                document.getElementById("copy").innerHTML="&copy;2023年贝赛思蛇口国际编程与网站设计";
+                document.getElementById("project").innerHTML="二年级像素画展";
+            }
+        </script>
+    </body>
+</html>

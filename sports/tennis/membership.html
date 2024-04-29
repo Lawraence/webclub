@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>BISZ Tennis club</title>
+<meta name="viewport" content="width = device-width, initial-scale =1.0">
+    <link rel="icon" href="images/favicon.jpg">
+    <link rel="stylesheet" href="main3.css">
+    <meta charset="UTF-8">
+</head>
+    
+<body>
+    <script>
+        function validtext(davisonform)
+{
+  if(davisonform.name.value == "")
+  {
+    return false;
+  }
+  
+  if(davisonform.email.value == "")
+  {
+    return false;
+  }
+  
+}
+
+function validradio(davisonform)
+{
+  if(davisonform.size[0].checked == true)
+  {
+    return true;
+  }
+  if(davisonform.size[1].checked == true)
+  {
+    return true;
+  }
+  if(davisonform.size[2].checked == true)
+  {
+    return true;
+  }
+  if(davisonform.size[3].checked == true)
+  {
+    return true;
+  }
+  if(davisonform.size[4].checked == true)
+  {
+    return true;
+  }
+  return false;
+}
+
+function dosubmit(davisonform)
+{
+  if(validtext(davisonform) == false){
+    alert("please fill out step 1 complitly");
+    return;
+  }
+  if(validradio(davisonform) == false){
+    alert("please fill out step 2 complitly");
+    return;
+  }
+  alert("thank you");
+}
+
+    </script>
+    <div id="big_wrapper">
+        <header id="top_header">
+            <img class="banner" src="images/banner.png" alt="banner">
+        </header>
+        <nav id="top_menu">
+            <ul class="abc">
+               <a class="active" href="index.html" > <li>Home</li></a>
+                <a href="activities.html"><li>Activities</li></a>
+                <a href="membership.html"><li>Membership</li></a>
+                <a href="about.html"><li>About Tennis</li></a>
+                <a href="contact.html"><li>Contact</li></a>
+                
+            </ul>
+        </nav>
+        <div id="new_div">
+            <div id="main_section">
+                <div id="a">
+    <form name="davisonform">
+    
+    <table >
+      <tr>
+        <td colspan="2"><h4>step 1:please type in personal info:</h4></td>
+      </tr>
+      <tr>
+        <td>
+    name
+    </td>
+    <td >
+    <input type = "text" name="name" size="30" class="ie"></td>
+      </tr>
+      <tr>
+        <td>
+    email
+        </td>
+        <td>
+    <input type = "text" name="email" size="30" class="ie">
+        </td>
+    
+      </tr>
+      <tr >
+      <td>
+    grade
+      </td>
+      <td>
+        <input type = "text" name="city" size="20" class="ie">
+      
+    element:<input type = "text" name="state" size="2" class="ie">
+      
+    
+      </td>
+      </tr>
+      
+    </table>
+    <h4>step 2:please select the level that you like tennis</h4>
+    <input type="radio" name="size">1/5<br>
+    <input type="radio" name="size">2/5<br>
+    <input type="radio" name="size">3/5<br>
+    <input type="radio" name="size">4/5<br>
+    <input type="radio" name="size">5/5<br>
+    
+    
+    
+    <input type="button" value="submit" class="bs" onclick="dosubmit(davisonform)">
+    <br><br>
+   
+    </form>
+    </div>
+                
+            </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+        </div>
+       
+        
+        <footer id="the_footer" style="color: #fff066;">
+            <p>Copyright &copy; 2022 Basis Web Design All rights reserved.</p><br>
+            <a href="index.html"> Home </a>|<a href="activities.html"> Activities </a>|<a href="membership.html"> Membership </a>|<a href="about.html"> About Tennis </a>|<a href="contact.html"> Contact </a><br>        
+        </footer>
+    </div>
+</body>
+</html>

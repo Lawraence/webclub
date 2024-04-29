@@ -1,0 +1,22 @@
+@charset "utf-8";
+body {
+	margin:0;
+}
+
+#carousel {
+	width:10000px;
+}
+
+#carousel ul {
+	list-style:none;
+	width: 10000px;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+
+#carousel li {
+	display: inline;
+	float: left;
+	
+}

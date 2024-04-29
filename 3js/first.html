@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>three.js demo</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        canvas{
+            width: 100%;
+            height: 100%;
+        }
+
+    </style>
+</head>
+
+<body>
+    <script src="js/three.js"></script>
+    <script> 
+        const scene = new THREE.Scene(); 
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000); 
+        const renderer = new THREE.WebGLRenderer(); 
+
+        renderer.setSize(window.innerWidth, window.innerHeight); 
+        //setSize(window.innerWidth/2, window.innerHeight/2, false) will render your app at half resolution, given that your <canvas> has 100% width and height.
+
+        document.body.appendChild(renderer.domElement); 
+
+        renderer.shadowMap.enabled = true;
+        renderer.shadowMap.type = THREE.PCFSoftShadowMap; // default THREE.PCFShadowMap
+
+        renderer.setPixelRatio(window.devicePixelRatio);
+
+        //Create a DirectionalLight and turn on shadows for the light
+        const light = new THREE.DirectionalLight( 0xffffff, 1 );
+        light.position.set( 0, 0, 1 ); //default; light shining from top
+        light.castShadow = true; // default false
+        scene.add( light );
+
+        //Set up shadow properties for the light
+        light.shadow.mapSize.width = 512; // default
+        light.shadow.mapSize.height = 512; // default
+        light.shadow.camera.near = 0.5; // default
+        light.shadow.camera.far = 500; // default
+
+        const cubeGeo = new THREE.BoxGeometry(1, 1, 1); 
+        const cubeMat = new THREE.MeshLambertMaterial({ color: 0xffffff }); 
+        const cube = new THREE.Mesh(cubeGeo, cubeMat); 
+        cube.recieveShadow = true;
+        cube.castShadow = true;
+        scene.add(cube); 
+
+        const donuGeo = new THREE.TorusGeometry(2,0.1,4,40);
+        const donuMat = new THREE.MeshLambertMaterial({color: 0xff0000});
+        const donu = new THREE.Mesh(donuGeo, donuMat);
+        scene.add(donu);
+        cube.recieveShadow = true;
+        cube.castShadow = true;
+
+        scene.add(camera);
+
+        renderer.shadowMap.enabled = true;
+
+        camera.position.z = 5; 
+        //camera.rotation.y = 1.57;
+
+        function animate() { 
+            requestAnimationFrame(animate); 
+            //cube.position.x += 0.01;
+            cube.rotation.x += 0.01; 
+            cube.rotation.y += 0.01; 
+            donu.rotation.x += 0.05;
+            donu.rotation.y += 0.1;
+            donu.rotation.z += 0.05;
+
+            renderer.render(scene, camera); 
+        }
+        animate(); 
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+html{
+    overflow-y: scroll;
+    font-family: Arial;
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0px;
+}
+#title{
+    color: #3255A4;
+    font-size: 48px;
+    text-align: center;
+    margin: 10px;
+}
+#wrapper{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+#header{
+    text-align: center;
+    font-size: 48px;
+    height: 300px;
+    line-height: 300px;
+    font-weight: bold;
+    background-color: #888;
+}
+#heading{
+    padding: 30px 150px;
+    text-align: center;
+    font-size: 24px;
+    height: fit-content;
+    background-color: #BBB;
+}
+#container{
+    background-color: #6495ED;
+    padding: 20px 0px;
+}
+.link{
+    width: 90%;
+    margin: auto;
+    background-color: #FFF;
+    padding: 20px;
+    position: relative;
+    height: 250px;
+    margin-top: 40px;
+}
+.name{
+    color: #3255A4;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+.description{
+    margin-bottom: 40px;
+    font-size: 24px;
+}
+.info{
+    font-weight: bold;  
+    position: absolute;
+    bottom: 10px;
+    z-index: 50;
+}
+nav{
+    background-color: #AAA;
+    height: fit-content;
+    position: sticky;
+    top: 0px;
+    font-size: 24px;
+    padding: 5px;
+}
+a{
+    color: #000;
+    display: inline-block;
+    text-decoration: none;
+}
+nav a{
+    line-height: 40px;
+    padding: 0px 10px;
+}
+nav a:hover{
+    background-color: #DDD;
+    color: #000;
+}
+#content{
+    padding: 10px;
+}
+#footer{
+    background-color: #AAA;
+    text-align: center;
+    padding: 20px;
+}
+#downlink{
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+#downlink a{
+    color: #000;
+}
+#downlink a:hover{
+    color: #3255A4;
+    text-decoration: underline;
+}

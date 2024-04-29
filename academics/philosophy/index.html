@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>BISZ Philosophy club</title>
+<meta name="viewport" content="width = device-width, initial-scale =1.0">
+    <link rel="icon" href="images/下载.jpg">
+    <link rel="stylesheet" href="main.css">
+<meta charset="UTF-8">
+    
+</head>
+    
+<body>
+	
+    <div id="big_wrapper">
+        <header id="top_header">
+			
+            <img class="banner" src="images/banner.png" alt="banner">
+        </header>
+        <nav id="top_menu">
+            <ul class="abc">
+               <a class="active" href="index.html" > <li>Home</li></a>
+                <a href="contact.html"><li>Contact</li></a>
+                <a href="Activities.html"><li>Philosophical texts</li></a>
+                
+            </ul>
+        </nav>
+        <div id="new_div">
+			<aside id="side_news2">
+                <h1>about the club</h1>
+                The Philosophy Club selects philosophical texts to read and discuss throughout the year.  Authors may include Plato, Descartes, Hegel, Kant, Nietzsche, Heidegger, Sartre, Peter Singer, Martha Nussbaum, as well as more general surveys of the history of philosophy.  We move at a patient, comfortable, and manageable pace in order to enhance understanding and avoid interfering with academic obligations
+            </aside>
+            <div id="main_section">
+                <div class="carousel-container">
+  <div class="navigation">
+          <div class="prev nav-btn"><</div>
+          <div class="next nav-btn">></div>
+        </div>
+		<div class="carousel">
+          <div class="item main">
+            <img src="images/1.png" alt="mountain" />
+            <div class="caption">Happiness Poster</div> 
+          </div>
+      <div class="item">
+            <img src="images/2.png" alt="beach" />
+            <div class="caption">Meat Poster</div>
+          </div>
+          <div class="item">
+            <img src="images/3.png" alt="cityscape" />
+            <div class="caption">Absurd World</div>
+          </div>   
+			<div class="item">
+            <img src="images/4.png" alt="cityscape" />
+            <div class="caption">Group Identity</div>
+				
+          </div>
+			<div class="item">
+            <img src="images/5.png" alt="cityscape" />
+            <div class="caption">Meaningless World</div>
+          </div>
+        </div>
+ </div>
+					<div id="onlyM">
+						<img src="images/1.png" width="75%">
+						<img src="images/2.png">
+						<img src="images/3.png">
+						<img src="images/4.png">
+						<img src="images/5.png">
+						
+					</div>
+					
+            </div>
+            <aside id="side_news">
+                <h1>about the club</h1>
+                The Philosophy Club selects philosophical texts to read and discuss throughout the year.  Authors may include Plato, Descartes, Hegel, Kant, Nietzsche, Heidegger, Sartre, Peter Singer, Martha Nussbaum, as well as more general surveys of the history of philosophy.  We move at a patient, comfortable, and manageable pace in order to enhance understanding and avoid interfering with academic obligations
+            </aside>
+        </div>
+        <footer id="the_footer" style="color: #000;">
+            <p>Copyright &copy; 2024 Basis Web Design All rights reserved.</p><br>
+            <a href="index.html"> Home </a>|<a href="contact.html"> Contact </a>|<a href="contact.html"> Philosophical texts </a><br>
+        </footer>
+    </div>
+		<script>
+			const prev = document.querySelector('.prev');
+const next = document.querySelector('.next');
+const images = document.querySelector('.carousel').children;
+const totalImages = images.length;
+let index = 0;
+
+prev.addEventListener('click', () => {
+  nextImage('next');
+})
+
+next.addEventListener('click', () => {
+  nextImage('prev');
+})
+
+function nextImage(direction) {
+  if(direction == 'next') {
+    index++;
+    if(index == totalImages) {
+      index = 0;
+    }
+  } else {
+    if(index == 0) {
+      index = totalImages - 1;
+    } else {
+      index--;
+    }
+  }
+
+  for(let i = 0; i < images.length; i++) {
+    images[i].classList.remove('main');
+  }
+  images[index].classList.add('main');
+}
+			
+		</script>
+</body>
+</html>

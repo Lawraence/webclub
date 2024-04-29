@@ -1,0 +1,100 @@
+body
+{
+	overflow-y: scroll;
+	display: -webkit-box;
+	-webkit-box-pack: center;
+	/*end, justify, start*/
+}
+*
+{
+	margin: 0px;
+	padding: 0px;
+}
+h1
+{
+	font: bold 20px tahoma;
+}
+h4
+{
+	font: bold 14px tahoma;
+}
+header, section, aside, nav, footer, article, hgroup
+{
+	display: block;
+	/*Displays an element as a block element, much like a <p> tag or, as Mcqueen put it, a <div> tag - It starts a new line and takes up all available width*/
+}
+#big_wrapper
+{
+	max-width: 1000px;
+	margin: 10px 0px;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-box-flex: 1;
+	/*allows the webpage to scale based on display - 0 would then mean no scale*/
+}
+#top_header
+{
+	background: #FFFA66;
+	border: 3px solid #000000;
+	padding: 20px;
+	text-align: center;
+}
+#top_menu
+{
+	border-bottom: 3px solid #000000;
+	border-left: 3px solid #000000;
+	border-right: 3px solid #000000;
+	background: #FFFAAA;
+	color: #444443; /*doesn't matter*/
+	text-align: center;
+	padding: 2px;
+}
+#top_menu li
+{
+	display: inline-block;
+	list-style: none;
+	padding: 5px;
+	font: bold 14px tahoma;
+	border: 1px solid #000000;
+	border-radius: 5px;
+	width: 75px;
+	background: #CCCC00;
+	/*cursor: pointer;also pointless*/
+}
+#top_menu a
+{
+	color: #FFFFFF;
+}
+#top_menu li:hover
+{
+	color: #BDB76B;
+	background: #FFFF66;
+	box-shadow: 1px 1px 2px rgba(0, 0, 0, .65);
+}
+#new_div
+{
+	display: -webkit-box;
+	-webkit-box-orient: horizontal;
+}
+#main_section
+{
+	border: 1px solid #000000;
+	-webkit-box-flex: 1;
+	margin: 20px;
+	padding: 20px;
+}
+#side_news
+{
+	width: 220px;
+	border: 1px solid #BBB224;
+	margin: 20px 0px;
+	padding: 30px;
+	background: #DCDCDC;
+	font-family: arial;
+}
+#the_footer
+{
+	text-align: center;
+	padding: 20px;
+	border-top: 2px solid #000000;
+}
